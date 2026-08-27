@@ -1,7 +1,7 @@
 # CURRENT CREATIVE STATE
 
-Recorded: 2026-08-27
-Status: CURRENT CREATIVE DIRECTION ON PROJECT MAIN
+Recorded: 2026-08-27  
+Status: CURRENT CREATIVE DIRECTION ON PROJECT MAIN  
 Project Repository: `MICHIHAL/sakiya-game`
 
 ## 1. Current product direction
@@ -11,10 +11,6 @@ The current creative target is **「八乙女さきや 活動者育成インク�
 North Star:
 
 > **一緒にデカくする。**
-
-The player participates in Sakiya's activities and grows them from a quiet stream into works, communities, interconnected activities, prestige systems, Scale Transitions, and eventually world-breaking incremental scale.
-
-The intended participation arc is:
 
 ```text
 Presence
@@ -29,7 +25,7 @@ Shared Expansion
 
 ## 2. Current creative source priority
 
-For project-specific creative decisions, use this order unless SAKIYA gives a newer explicit direction:
+SAKIYAの新しい明示意思がない限り、Project固有のCreative判断は次の順で扱います。
 
 1. Current explicit SAKIYA intent
 2. `README.md`
@@ -41,15 +37,17 @@ For project-specific creative decisions, use this order unless SAKIYA gives a ne
    - blob: `164b06b2efd298ffe18a0d3d55195c54e849ca97`
    - introducing commit: `bb6878d41fbd6e61c0c92c8dc8aaf3c92b422f4c`
 6. Owner completion directive: `docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md`
-7. Work execution contract: `docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md`
-8. Current repository implementation evidence, only after resolving conflicts with the above creative direction
-9. Older design documents and implementation as Legacy / transition inputs
+7. Work finalization prompt: `docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.2.md`
+8. Forge execution authority: `docs/work/FORGE_EXECUTION_AUTHORITY_CONTRACT.md`
+9. Owner採用済みComplete Product Lock / Complete Creative Specification / Master Forge Handoff
+10. Current repository implementation evidence, after resolving conflicts with the current creative direction
+11. Older design documents and implementation as Legacy / migration inputs
 
-`README.md` and `AGENTS.md` have now been rewritten to the current creator-incremental direction.
+`docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md`は、品質観点と探索履歴として保持します。Engineering Authorityに関する解釈はv1.2とForge Execution Authority Contractが優先します。
 
 ## 3. Legacy / migration state
 
-The previous horizontal-scrolling action / RUN-based version of 「ヤニ切れ大パニック」 is no longer the Current Creative Product.
+The previous horizontal-scrolling action / RUN-based version is no longer the Current Creative Product.
 
 Existing product code, older design documents, `IMPLEMENTATION_REPORT.md`, `FORGE_RETURN.yaml`, `design-qa.md`, old RUN / boss / FEVER material, and related Evidence are retained as:
 
@@ -57,11 +55,9 @@ Existing product code, older design documents, `IMPLEMENTATION_REPORT.md`, `FORG
 
 They are not automatically merged into the current creator-incremental game.
 
-Legacy map:
+Legacy map: `legacy/README.md`
 
-- `legacy/README.md`
-
-Potentially reusable capabilities include, subject to Forge audit:
+Potentially reusable capabilities, subject to Forge audit:
 
 - save / backup / export / import
 - PWA / hosting foundation
@@ -74,78 +70,92 @@ Potentially reusable capabilities include, subject to Forge audit:
 
 Reuse of technical capability does not imply reuse of the old game experience.
 
-Before destructive migration, Forge must provide:
-
-- KEEP / ADAPT / REPLACE / ARCHIVE map
-- branch / backup plan
-- migration risk
-- save / data compatibility impact
-- rollback method
-- tests that must remain valid
-- impact on Current Creative Specification
-
-Creative Intent changes are returned to SAKIYA STUDIO rather than decided by Forge alone.
+Before destructive migration, Forge must provide a reuse map, rollback plan, data impact, risks, validation plan and Creative impact.
 
 ## 4. Fixed creative core
 
-Current accepted core includes:
-
 - North Star: **一緒にデカくする**
 - Presence → Co-creation → Shared Expansion
-- streaming as a Session system, not a decorative HUD
-- video / music / archive-like works as Asset Idle systems
-- Breakpoint / Automation / Prestige / Scale Transition as Meta Incremental systems
-- the same room as the long-term visual horizon
-- Personhood as a guardrail against listener rarity / performance gacha
-- gifts must not become the dominant route
-- Semantic Retirement when Scale Units change
-- ENTRY CHIME remains the same source sound across the game
-- different activities must preserve different satisfying verbs
-- light and deep incremental play remain the same game rather than separate difficulty modes
-- Work / SAKIYA STUDIO owns Creative Specification; Implementation Forge / Codex owns technical how
+- streaming as Session
+- works as Asset Idle
+- Breakpoint / Automation / Prestige / Scale Transition as Meta Incremental
+- the same room as the visual horizon
+- Personhood guardrail
+- gifts must not dominate
+- Semantic Retirement
+- identical ENTRY CHIME source
+- distinct activity verbs
+- light and deep incremental play remain the same game
+- Work owns Creative Specification; Forge owns technical execution
 
-## 5. Completion target
+## 5. Execution authority correction
 
-The target is not a prototype, vertical slice, or technical foundation.
+The nearly completed Work remains valid.
 
-A completed product means a state that is ready for final paid-publication judgment and includes, at minimum:
+Binding Work outputs:
 
-- complete player journey from first launch through the accepted Main Goal and defined post-goal
-- final UI and responsive interaction
-- final art, motion, effects, BGM, SFX, and mix
-- complete accepted activity systems and progression
-- balance, offline progression, save / backup / migration / export-import
+- Final Product Lock
+- Creative Intent
+- player-visible specification
+- Creative Invariants
+- Test Intent
+- Acceptance Criteria
+- required evidence categories
+- Owner Gates
+
+Non-binding Work recommendations:
+
+- technical implementation order
+- subagent roster
+- exact test decomposition
+- CI
+- architecture
+- branch / commit strategy
+- adversarial technical review method
+- regression implementation
+- release engineering
+
+Implementation Forge / Codex must independently audit the repository and create its own architecture, execution graph, subagent plan, test strategy, adversarial review, regression, CI and release plan.
+
+Creative changes must be returned to SAKIYA STUDIO.
+
+## 6. Completion target
+
+The target is not a prototype, vertical slice, technical foundation, build success, or a single passing test run.
+
+Completion requires:
+
+- first launch through accepted Main Goal and post-goal
+- final UI, art, motion, effects, BGM, SFX and mix
+- accepted activities and progression
+- balance, offline, save / backup / migration / export-import
 - accessibility and alternate cues
-- completed content / flavor coverage
-- rights, privacy, credits, license review
-- real-device evidence, performance evidence, recovery evidence
+- completed content coverage
+- rights, privacy, credits and license review
+- device, performance and recovery evidence
 - Creative PASS
 - Technical PASS
 - SAKIYA Final Acceptance
 - Release Gate PASS
 
-`build succeeded`, `tests passed once`, `foundation exists`, or `a portion is playable` are not sufficient completion claims.
+Public release still requires explicit Owner authorization.
 
-Public release itself still requires explicit Owner authorization.
-
-## 6. Current production sequence
-
-The current intended sequence is:
+## 7. Current production sequence
 
 ```text
 Current Creative State
 ↓
-Complete Product Lock in Work
+Complete Product Lock / Creative Specification in Work
 ↓
-Project Migration / Reuse Decision
+Authority Reclassification and Master Forge Handoff
 ↓
-Complete Creative Specification
+Forge Repository Audit and Technical Plan
+↓
+Forge-owned work breakdown, subagents and test strategy
 ↓
 P0-SIM + P0-FEEL validation
 ↓
-Modular Forge implementation packages
-↓
-Adversarial review / repair / regression loops
+Implementation / adversarial review / repair / regression
 ↓
 Full production completion
 ↓
@@ -158,7 +168,7 @@ Release-ready Gate
 Public release only with explicit Owner authorization
 ```
 
-## 7. Claims that remain unknown
+## 8. Claims that remain unknown
 
 This pointer does not claim:
 
@@ -170,5 +180,3 @@ This pointer does not claim:
 - completed real-device validation
 - release readiness
 - public release
-
-Those require the evidence and gates defined by the completion design process.
