@@ -6,6 +6,17 @@
 
 現在のCreative Directionは、旧「横スクロールアクション版 ヤニ切れ大パニック！」ではありません。
 
+## 起動
+
+```sh
+npm install
+npm start
+```
+
+ブラウザで **http://127.0.0.1:42681/** を開きます。`npm run dev` も同じURLです。
+
+開発版は、ほかのローカルPWAが使いがちな既定ポートを避けた専用originで起動します。production previewは、先に`npm run build`を実行してから`npm run preview`を使い、**http://127.0.0.1:42682/** を開きます。
+
 ## Current product direction
 
 ```text
@@ -97,13 +108,13 @@ Work成果をCodexへ渡す際のAuthority契約：
 
 ## Current implementation status
 
-現在の`src/`、旧実装レポート、旧asset / testの一部には、以前の横スクロールアクション版が残っています。
+現在の`src/`は、Roomを主面とする粗く鮮やかな8-bit版のローカル完成候補です。新規開始から24 BP / 10 SP / U10、最終Anchor Broadcast、最後の選択、Continue / Strong New Gameまで実装しています。
 
 状態：
 
-> **LEGACY IMPLEMENTATION / MIGRATION INPUT**
+> **IMPLEMENTED / AUTOMATED AND INDEPENDENT STATIC PASS / RUNTIME, CREATIVE, OWNER, AND RELEASE GATES OPEN**
 
-旧コードの存在を理由に新Creative Specificationを旧コアループへ寄せてはいけません。
+以前の横スクロールアクション版は`legacy/`と`docs/engineering/legacy-assets/`へ分離し、現行の公開assetには含めません。
 
 再利用候補：
 

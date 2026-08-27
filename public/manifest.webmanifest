@@ -1,24 +1,24 @@
 {
-  "name": "八乙女さきやの ヤニ切れ大パニック！",
-  "short_name": "ヤニ切れ大パニック",
-  "description": "配信×横スクロール×インクリメンタル成長。負けた配信を次の最強へ変えるRun型ゲーム。",
+  "name": "八乙女さきや 活動者育成インクリメンタル",
+  "short_name": "活動者育成",
+  "description": "一緒に枠や作品をつくり、活動を新しい尺度へ広げていくローカルファーストの育成ゲーム。",
   "lang": "ja",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0d0611",
-  "theme_color": "#17091f",
+  "background_color": "#100b16",
+  "theme_color": "#8f2457",
   "categories": ["games", "entertainment"],
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icon-8bit-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icon-8bit-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

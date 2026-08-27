@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "product": "八乙女さきや 活動者育成インクリメンタル",
+  "voiceIdentity": "NO_VOICE",
+  "generatedBy": {
+    "script": "scripts/generate-current-audio.mjs",
+    "generatorVersion": "1.0.0",
+    "deterministic": true
+  },
+  "assets": [
+    {
+      "assetId": "S0_ENTRY_CHIME",
+      "semanticClass": "S0",
+      "runtimePath": "/assets/current/entry-chime.wav",
+      "sha256": "956a9f69049bc22b1d9e5a902696bf143c2136063fc4d3d28dfaca605536b9f4",
+      "byteLength": 69164,
+      "durationSeconds": 0.72,
+      "format": {
+        "container": "WAV",
+        "encoding": "PCM_S16LE",
+        "channels": 1,
+        "sampleRate": 48000,
+        "bitsPerSample": 16
+      },
+      "sourceMaster": "scripts/generate-current-audio.mjs:S0_ENTRY_CHIME_V1",
+      "editLineage": [
+        "project-original deterministic render",
+        "no post-render edits"
+      ],
+      "creator": "Sakiya Game Forge",
+      "provenance": "Project-original deterministic generated signal rendered from source code in this repository; no third-party sample or voice input.",
+      "rightsBasis": "project-original generated signal",
+      "attribution": "No third-party attribution required.",
+      "territoryTerm": "Project-owned use; no external sample license dependency.",
+      "voiceIdentity": "NO_VOICE",
+      "trigger": {
+        "id": "TRG-ENTRY-01",
+        "event": "first external fictional arrival",
+        "oncePerSaveLineage": true,
+        "laterArrivalPolicy": "not adopted"
+      },
+      "caption": "はじめての来訪",
+      "visualSignal": {
+        "kind": "arrival-mark",
+        "glyph": "✦",
+        "label": "最初の外部からの来訪を履歴に記録"
+      },
+      "mix": {
+        "bus": "sfx",
+        "priority": "M1",
+        "duckTargets": [
+          "music",
+          "ambience"
+        ],
+        "concurrency": 1,
+        "cooldown": "event-scoped",
+        "resumePolicy": "never-queue"
+      },
+      "implementationStatus": "present; listening acceptance not yet run",
+      "evidenceRefs": [
+        "generated asset hash",
+        "current-audio semantic registry"
+      ],
+      "replacementWithdrawalPath": "Remove this asset and its registry record together if a later approved replacement is required; do not create a variant."
+    }
+  ]
+}
