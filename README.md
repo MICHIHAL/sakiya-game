@@ -8,8 +8,6 @@
 
 ## Current product direction
 
-プレイヤーの参加は、ゲームの進行とともに次のように変化します。
-
 ```text
 Presence
 その場にいる
@@ -21,7 +19,7 @@ Shared Expansion
 活動を接続し、新しい尺度へ広げる
 ```
 
-中心体験は次です。
+中心体験：
 
 - 初期：`自分もここにいる。誰か来た。楽しい。`
 - 中盤：`一緒に作ったものが、次の人を連れてきた。`
@@ -38,18 +36,26 @@ Shared Expansion
 
 ## Current creative source priority
 
-Project固有のCreative判断は、SAKIYAの新しい明示意思がない限り、次の順で扱います。
+SAKIYAの新しい明示意思がない限り、Project固有のCreative判断は次の順で扱います。
 
 1. 現在のSAKIYAの明示意思
 2. [`docs/CURRENT_CREATIVE_STATE.md`](docs/CURRENT_CREATIVE_STATE.md)
-3. [`docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md`](docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md)
-4. [`docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md`](docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md)
-5. [`docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md`](docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md)
-6. Repository内の旧企画・旧実装・過去検証資料
+3. [`AGENTS.md`](AGENTS.md)
+4. [`docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md`](docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md)
+5. [`docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md`](docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md)
+6. [`docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md`](docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md)
+7. Owner採用済みのComplete Product Lock / Creative Specification / Forge Handoff
+8. Repository内の旧企画・旧実装・過去検証資料
 
-Workで完成仕様を作る場合は、次を使用します。
+Workを最終化する場合：
 
-- [`docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md`](docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md)
+- [`docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.2.md`](docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.2.md)
+
+Work成果をCodexへ渡す際のAuthority契約：
+
+- [`docs/work/FORGE_EXECUTION_AUTHORITY_CONTRACT.md`](docs/work/FORGE_EXECUTION_AUTHORITY_CONTRACT.md)
+
+`v1.1`は品質観点と探索履歴として保持しますが、実装分担・テスト手法・工程のAuthority解釈は`v1.2`とForge Execution Authority Contractが優先します。
 
 ## Fixed creative core
 
@@ -75,7 +81,7 @@ Workで完成仕様を作る場合は、次を使用します。
 - 完成版UI、アート、モーション
 - 完成版BGM、SFX、mix
 - accepted activity systems
-- 完整な成長経済、Breakpoint、Automation、Prestige、Scale Transition
+- 完成した成長経済、Breakpoint、Automation、Prestige、Scale Transition
 - save、backup、export/import、offline progression、復旧
 - accessibility、Reduced Motion、音なし通知、イベントログ
 - responsive / target device verification
@@ -91,30 +97,26 @@ Workで完成仕様を作る場合は、次を使用します。
 
 ## Current implementation status
 
-**現在の`src/`、旧README系資料、旧実装レポートには、以前の横スクロールアクション版の実装が残っています。**
+現在の`src/`、旧実装レポート、旧asset / testの一部には、以前の横スクロールアクション版が残っています。
 
-これはCurrent Creative Productではありません。
-
-状態は、
+状態：
 
 > **LEGACY IMPLEMENTATION / MIGRATION INPUT**
 
-です。
+旧コードの存在を理由に新Creative Specificationを旧コアループへ寄せてはいけません。
 
-旧コードが存在することを理由に、新しいCreative Specificationを旧コアループへ寄せてはいけません。
+再利用候補：
 
-一方、旧実装に存在する次の能力は再利用候補です。
-
-- save / backup / export/import
+- save / backup / export-import
 - responsive / PWA / hosting
 - accessibility settings
 - audio infrastructure
 - performance settings
 - test infrastructure
 
-再利用・破棄・移行はImplementation ForgeがTechnical Auditを行い、Creative Intentを変える必要がある場合はSAKIYA STUDIOへ戻します。
+再利用・破棄・移行はImplementation ForgeがTechnical Auditを行い、Creative Intent変更が必要ならSAKIYA STUDIOへ戻します。
 
-旧実装と旧資料の扱いは [`legacy/README.md`](legacy/README.md) を参照してください。
+Legacy map：[`legacy/README.md`](legacy/README.md)
 
 ## Authority
 
@@ -123,12 +125,10 @@ Workで完成仕様を作る場合は、次を使用します。
 - Implementation Forge / Codex：Engineering Authority
 - GitHub：正規保存面、履歴、共有、受け渡し。Authorityではない
 
+Workは完成像、Creative Intent、player-visible specification、Test Intent、Acceptance Evidenceを定義します。
+
+Codexはtechnical architecture、実装計画、作業分解、サブエージェント、テスト戦略、敵対的技術レビュー、回帰、CI、Release Engineering、commit計画を自ら設計・実行します。
+
+Work内のEngineering詳細は参考案であり、Forgeを拘束しません。Creative変更が必要な場合はSAKIYA STUDIOへ返します。
+
 Creative PASS、Technical PASS、Owner Acceptance、Release状態を互いに代用しません。
-
-## Development
-
-現行コードはLegacy実装を含むため、現在の起動結果を新ゲーム完成状態と解釈しないでください。
-
-Repositoryのbuild / hosting / test基盤を調査する場合は、既存scriptを壊す前にEvidenceを残し、Migration Work Packageの中で変更します。
-
-新方向の本格実装は、Complete Product Creative Specification、P0 Validation、Forge Handoffに従って段階的に進めます。
