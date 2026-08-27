@@ -1,0 +1,79 @@
+forge_return:
+  schema_version: "0.2.0"
+  id: "FR-YANI-KIRE-PANIC-2026-08-23"
+  handoff_ref: "OWNER-REQUEST-2026-08-23"
+  returned_at: "2026-08-23"
+
+  project:
+    project_id: "PRJ-YANI-KIRE-PANIC"
+    repository: "MICHIHAL/sakiya-game"
+    branch: "feat/premium-experience"
+    base_commit: "1dc665597a6c6149078534da664d3620a196b62e"
+    result_commit: "4cc2eab3d80fa712d2edec023f00f5f2e0f4ce5a"
+
+  implemented_delta:
+    - "STARTからFINAL BOSS、ENDING、ENCOREまでの自動進行RUNを実装"
+    - "敗北、RESULT、8系統の永続強化、再スタート、localStorage保存を実装"
+    - "リスナー、LIVE、ギフト、コメント、応援収益、ランキング、FEVERを成長経済へ統合"
+    - "4地区、通常敵、MID BOSS、AREA BOSS、FINAL BOSS、背景遷移を実装"
+    - "4配信方針、3 FEVER SCRIPT、7 boss固有妨害、Archive、Encoreを実装"
+    - "area/boss/FEVER連動BGM、個別SFX、滑らかなCanvas animationを実装"
+    - "schema 3、auto backup、3 slots、export/import、PWA/offline shellを実装"
+    - "PCとスマートフォン向けレスポンシブUI、音量、低モーション、視認性設定を実装"
+  engineering_decisions:
+    - "Ownerの最新判断に従い、RUNを見守り主体の自動進行へ固定"
+    - "一回の幸運で全ゲームを飛ばさないRun内レベル上限と、約4周での完走曲線を採用"
+    - "ゲーム状態を純粋な決定的シミュレーションとして分離し、ブラウザ外でも進行を検証可能にした"
+  artifact_refs:
+    - "README.md"
+    - "IMPLEMENTATION_REPORT.md"
+    - "design-qa.md"
+    - "docs/quality/CREATIVE_REVIEW_ITERATION_2.md"
+    - "docs/quality/VERIFICATION_REPORT.md"
+    - "artifacts/qa-comparison-final.jpg"
+
+  technical_verification:
+    verdict: "PASS_WITH_KNOWN_GAPS"
+    checks_run:
+      - "node --test tests/game-engine.test.mjs — 11 passed"
+      - "node --test tests/sites-worker.test.mjs — 4 passed"
+      - "Vite production build — passed"
+      - "PWA manifest parse / service-worker syntax / zero-byte assets — passed"
+      - "Cloud browser primary-flow verification — passed"
+      - "Source/prototype combined visual comparison — passed"
+    runtime_evidence_refs:
+      - "artifacts/run-implementation-final.jpg"
+      - "artifacts/qa-comparison-final.jpg"
+      - "design-qa.md"
+      - "docs/quality/VERIFICATION_REPORT.md"
+    unmet_criteria: []
+    unverified_items:
+      - "Physical iPhone/Android device run; cloud browser viewport emulation was unavailable"
+      - "Human-monitored BGM/SFX loudness and fatigue review"
+      - "Production HTTPS service-worker lifecycle, store packaging, localization matrix, support matrix, and long-session soak"
+
+  creative_authority_return:
+    required: true
+    reason: "中核体験はCreative PASSだが、無条件の¥9,800 release claimにはauthored content volumeとboss固有choreographyのOwner acceptanceが必要"
+    affected_approved_spec:
+      - "正式campaign尺"
+      - "boss固有animation/VFX物量"
+      - "価格promiseとstore package"
+    proposed_options:
+      - "現revisionを高品質foundationとして試遊・balance testへ進める"
+      - "数値grindを増やさず、固有event・build unlock・boss choreographyをproductionする"
+    trade_off: "content追加は価格説得力を上げる一方、短い再挑戦と旧壁瞬殺のtempoを守る必要がある"
+
+  github_sync:
+    commit_created: true
+    commit_ref: "4cc2eab3d80fa712d2edec023f00f5f2e0f4ce5a"
+    push_status: "PUSHED"
+    remote_ref: "MICHIHAL/sakiya-game:feat/premium-experience"
+
+  owner_touch_deliverable:
+    kind: "runtime"
+    locator: "cloud-browser-local-preview"
+    opened_on_iphone: false
+
+  final_status: "TECHNICALLY_VERIFIED_WITH_CREATIVE_RELEASE_GATES"
+  note: "Core campaignとEncoreまで実装・検証し、専用Project Repositoryへpush済み。Technical PASSは無条件の¥9,800 release claim、実機・実聴、Owner Acceptanceを意味しない"
