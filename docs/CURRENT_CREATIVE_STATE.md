@@ -32,34 +32,34 @@ Shared Expansion
 For project-specific creative decisions, use this order unless SAKIYA gives a newer explicit direction:
 
 1. Current explicit SAKIYA intent
-2. `docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md`
+2. `README.md`
+3. `AGENTS.md`
+4. `docs/SAKIYA_CREATOR_INCREMENTAL_CREATIVE_GAME_DESIGN_SPEC_v0.7.md`
    - blob: `b32210d45beaa27482694825b366ff4041951dcd`
    - introducing commit: `204f8c64447bb1f6cac79d7a2a63eacc5e3433b2`
-3. `docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md`
+5. `docs/SAKIYA_INCREMENTAL_PROTOTYPE_FOUNDATION_FREEZE_SPEC.md`
    - blob: `164b06b2efd298ffe18a0d3d55195c54e849ca97`
    - introducing commit: `bb6878d41fbd6e61c0c92c8dc8aaf3c92b422f4c`
-4. Owner completion directive: `docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md`
-5. Work execution contract: `docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md`
-6. Current repository implementation evidence, only after resolving conflicts with the above creative direction
-7. Older design documents and implementation as Legacy / transition inputs
+6. Owner completion directive: `docs/decisions/OWNER_COMPLETION_TARGET_2026-08-27.md`
+7. Work execution contract: `docs/work/WORK_PROMPT_COMPLETE_GAME_FORGE_HANDOFF_v1.1.md`
+8. Current repository implementation evidence, only after resolving conflicts with the above creative direction
+9. Older design documents and implementation as Legacy / transition inputs
 
-## 3. Legacy / transition state
+`README.md` and `AGENTS.md` have now been rewritten to the current creator-incremental direction.
 
-The repository root `README.md`, `AGENTS.md`, existing product implementation, `IMPLEMENTATION_REPORT.md`, `FORGE_RETURN.yaml`, and related older design documents may still describe the previous horizontal-scrolling action / RUN-based version of 「ヤニ切れ大パニック」.
+## 3. Legacy / migration state
 
-Those materials are **not the current creative product target when they conflict with the sources above**.
+The previous horizontal-scrolling action / RUN-based version of 「ヤニ切れ大パニック」 is no longer the Current Creative Product.
 
-They are retained as transition inputs until a Project Direction Transition Decision classifies each area as:
+Existing product code, older design documents, `IMPLEMENTATION_REPORT.md`, `FORGE_RETURN.yaml`, `design-qa.md`, old RUN / boss / FEVER material, and related Evidence are retained as:
 
-- KEEP
-- ADAPT
-- ARCHIVE
-- REMOVE FROM CURRENT DIRECTION
-- UNKNOWN
+> **SUPERSEDED CREATIVE DIRECTION / LEGACY IMPLEMENTATION / MIGRATION INPUT**
 
-Do not silently merge the old RUN/action core loop into the current creator-incremental design.
+They are not automatically merged into the current creator-incremental game.
 
-Do not delete or destructively rewrite the old implementation solely from this pointer. Migration requires an explicit transition plan and Owner approval where creative meaning changes.
+Legacy map:
+
+- `legacy/README.md`
 
 Potentially reusable capabilities include, subject to Forge audit:
 
@@ -73,6 +73,18 @@ Potentially reusable capabilities include, subject to Forge audit:
 - recovery / resilience patterns
 
 Reuse of technical capability does not imply reuse of the old game experience.
+
+Before destructive migration, Forge must provide:
+
+- KEEP / ADAPT / REPLACE / ARCHIVE map
+- branch / backup plan
+- migration risk
+- save / data compatibility impact
+- rollback method
+- tests that must remain valid
+- impact on Current Creative Specification
+
+Creative Intent changes are returned to SAKIYA STUDIO rather than decided by Forge alone.
 
 ## 4. Fixed creative core
 
@@ -125,7 +137,7 @@ Current Creative State
 ↓
 Complete Product Lock in Work
 ↓
-Project Direction Transition Decision
+Project Migration / Reuse Decision
 ↓
 Complete Creative Specification
 ↓
